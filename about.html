@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='assets/images/logo.png') }}" alt="工作室Logo">
+            </a>            <h1>MaMaMia Studio</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}#home">Home</a></li>
+                <li>
+                    <a href="{{ url_for('index') }}#home">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="{{ url_for('service1') }}">Service 1</a></li>
+                        <li><a href="{{ url_for('service2') }}">Service 2</a></li>
+                        <li><a href="{{ url_for('service3') }}">Service 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for('index') }}#contact">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Welcome to our studio</h1>
+        <p>We focus on creative design and production</p>
+    </section>
+
+    <main>
+        <section id="about-us" class="section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>這裡是關於我們的詳細介紹，描述工作室的歷史、使命、團隊成員等等。</p>
+                <div class="team">
+                    <div class="team-member">
+                        <img src="{{ url_for('static', filename='assets/images/member1.jpg') }}" alt="成員1">
+                        <h3>成員 1</h3>
+                        <p>創意總監</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="{{ url_for('static', filename='assets/images/member2.jpg') }}" alt="成員2">
+                        <h3>成員 2</h3>
+                        <p>設計師</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="{{ url_for('static', filename='assets/images/member3.jpg') }}" alt="成員3">
+                        <h3>成員 3</h3>
+                        <p>製片人</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="{{ url_for('static', filename='assets/images/member4.jpg') }}" alt="成員3">
+                        <h3>成員 4</h3>
+                        <p>製片人</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MaMaMia Studio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
