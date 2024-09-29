@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     nextBtn.addEventListener('click', nextSlide);
     prevBtn.addEventListener('click', prevSlide);
-    setInterval(nextSlide, 3000); // 每3秒自動播放一次
+    setInterval(nextSlide, 5000); // 每5秒自動播放一次
 
     // 平滑滾動功能
     document.querySelectorAll('nav a, .cta').forEach(anchor => {
